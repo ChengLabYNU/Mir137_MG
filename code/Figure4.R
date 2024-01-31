@@ -111,17 +111,3 @@ pK <- pK1/pK2/pK3
 ggsave(plot=pm,file='Fig4F_MG.pdf',width=3.5,height=9)
 ggsave(plot=pW,file='Fig4F_cWT.pdf',width=3.5,height=9)
 ggsave(plot=pK,file='Fig4F_cKO.pdf',width=3.5,height=9)
-
-
-#####################################################################
-#                             Fig4G                                 #
-#####################################################################
-
-bardata <- read.csv('data/Forbarplot.csv')
-bardata$group <- factor(bardata$group,levels = c('T/NK','DC','MNC','NEUT','PVM','MG-4','MG-3','MG-2','MG-1'))
-bardata$TYPE <- factor(bardata$TYPE,levels = c('cWT','cKO'))
-pb <- ggplot(bardata,aes(x=TYPE,weight=Proportion,fill=group))+
-  geom_bar(position = 'stack')+scale_fill_manual(values = c('#FF9999','#006666','#CC0033','#CC00CC','#CC6699','#6633CC','#993300','#CC9900','#339966'))+
-  theme_bw()+
-  theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())
-ggsave(plot=pb,file='Fig4G.pdf',width=6,height=8)

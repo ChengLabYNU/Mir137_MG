@@ -47,7 +47,7 @@ sig <- tt$table$FDR < 0.05
 sum(sig)
 
 sig.dir <- sign(tt$table$logFC[sig])
-cols <- ifelse(sig, "#E41A1CFF", "#22222244")
+cols <- ifelse(sig, "#E41A1C", "#22222244")
 
 tmp <- as.data.frame(cbind(rowMeans(Dex),rowMeans(Din),cols))
 colnames(tmp) <- c('Dexon','Dintron','cols')

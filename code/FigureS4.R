@@ -143,4 +143,4 @@ pb <- ggplot(bardata,aes(x=TYPE,weight=Proportion,fill=group))+
   geom_bar(position = 'stack')+scale_fill_manual(values = c('#FF9999','#006666','#CC0033','#CC00CC','#CC6699','#6633CC','#993300','#CC9900','#339966'))+
   theme_bw()+
   theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())
-ggsave(plot=pb,file='FigS4G.pdf',width=6,height=8)
+ggsave(plot=pb,file='Fig4G.pdf',width=6,height=8)
